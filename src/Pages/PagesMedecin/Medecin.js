@@ -24,7 +24,7 @@ function Medecin() {
           console.log("true")
           setCookies("access_token",response.data.token)
           window.localStorage.setItem("MedecinID",response.data.medecinID)
-        // window.location="Smedecin"
+        
          navigate("test")
 
          
@@ -45,7 +45,7 @@ function Medecin() {
         console.log(error)
       })
       
-       
+        // window.location="Smedecin"
       }*/
   
     

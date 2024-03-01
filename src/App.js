@@ -12,7 +12,7 @@ import Register from './Pages/PagesUsers/Register';
 import Login from './Pages/PagesUsers/Login';
 import HomeUsers from './Pages/PagesUsers/HomeUsers';
 import EspaceUsers  from './Pages/PagesUsers/EspaceUsers';
-import Test from './Pages/Test';
+import Test from './Pages/PagesMedecin/Test';
 import EspaceMedecin from './Pages/PagesMedecin/EspaceMedecin';
 //import TestLogin from './Pages/PagesUsers/TestLogin';
 //import TestLogin from './Pages/PagesUsers/TestLogin';

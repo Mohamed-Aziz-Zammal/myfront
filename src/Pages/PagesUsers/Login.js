@@ -3,12 +3,12 @@
 import Axios  from "axios"
 import{ useCookies} from 'react-cookie'
 import { useState } from "react";
-//import { useNavigation } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 function Login() {
     const [email,setEmail]=useState("")
     const [password,setPassword]=useState("")
 
-   // const navigate = useNavigation();
+   const navigate = useNavigate();
 
     const [,setCookies] = useCookies(["access_token"])
 
@@ -27,7 +27,7 @@ function Login() {
           console.log("true")
           setCookies("access_token",response.data.token)
           window.localStorage.setItem("userID",response.data.userID)
-          //navigate("test")
+         navigate("espace")
 
           
         }
@@ -55,7 +55,7 @@ function Login() {
     <button  type="submit">login</button>            
 
     </form>
-   
+  
    </>
   )
 }
