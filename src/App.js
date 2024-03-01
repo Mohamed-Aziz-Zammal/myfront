@@ -14,6 +14,7 @@ import HomeUsers from './Pages/PagesUsers/HomeUsers';
 import EspaceUsers  from './Pages/PagesUsers/EspaceUsers';
 import Test from './Pages/PagesMedecin/Test';
 import EspaceMedecin from './Pages/PagesMedecin/EspaceMedecin';
+import Question6 from './Pages/Question6';
 //import TestLogin from './Pages/PagesUsers/TestLogin';
 //import TestLogin from './Pages/PagesUsers/TestLogin';
 function App() {
@@ -39,7 +40,7 @@ function App() {
           <Route path='espace' element ={<EspaceUsers/>}/>
         </Route>
         
-       
+        <Route path='/Question6' element={<Question6/>} />
         
         
 
