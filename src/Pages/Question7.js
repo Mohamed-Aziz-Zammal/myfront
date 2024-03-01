@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import Axios from "axios";
 
-function Question6() {
-    const [lettres, setLettres] = useState([]);
+function Question7() {
+    const [numbers, setLettres] = useState([]);
     const [resltat, setResltat] = useState("");
   
-    const options = ['couverture', 'violon', 'arbre', 'triangle','temoignage','klaxon','sachet','cultivateur'];
+    const options = ['3619', '2587', '9473', '28416','73594'];
 
     const myresltat = () => {
-        var x = lettres.length;
+        var x = numbers.length;
         if (x === options.length) {
             setResltat("oui");
         } else {
@@ -17,7 +17,7 @@ function Question6() {
     }
 
     const handleInputChange = (index,value) => {
-        const updatedLettres = [...lettres];
+        const updatedLettres = [...numbers];
         updatedLettres[index] ={ [options[index]]: value };
         setLettres(updatedLettres);
     };
@@ -25,8 +25,8 @@ function Question6() {
     const onSubmit = async (e) => {
         e.preventDefault();
         await myresltat(); 
-        const response = await Axios.post("http://localhost:3001/Question6/CreateQuestion6", {
-            lettres,
+        const response = await Axios.post("http://localhost:3001/Question7/CreateQuestion7", {
+            numbers,
             resltat
         });
         console.log("response", response);
@@ -34,7 +34,7 @@ function Question6() {
   
     return (
         <>
-            <div>Question6</div>
+            <div>Question7</div>
             <form onSubmit={onSubmit}>
                 <br />
                 {options.map((option, index) => (
@@ -43,7 +43,7 @@ function Question6() {
                         <input
                             type="text"
                             id={option}
-                            value={(lettres[index] && Object.values(lettres[index])[0]) || ''}
+                            value={(numbers[index] && Object.values(numbers[index])[0]) || ''}
                             onChange={(e) => handleInputChange(index, e.target.value)}
                         />
                         <br />
@@ -55,4 +55,4 @@ function Question6() {
     )
 }
 
-export default Question6;
+export default Question7;
