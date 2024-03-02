@@ -6,14 +6,22 @@ function Question8() {
     const [resltat, setResltat] = useState("");
   
     const options = ['58', '27', '971', '364'];
+    const options1 = ['85', '72', '179', '463'];
 
     const myresltat = () => {
-        var x = numbers.length;
-        if (x === options.length) {
+        var x=0
+        for (let i = 0; i < options1.length; i++){
+            if(options1[i]===numbers[i]){
+                x=x+1
+
+            }
+        }   
+        if (x === numbers.length) {
             setResltat("oui");
         } else {
             setResltat("non");
         }
+        
     }
 
     const handleInputChange = (index,value) => {
@@ -30,9 +38,10 @@ function Question8() {
             resltat
         });
         console.log("response", response);
+        
     }
   
-    return (
+    return(
         <>
             <div>Question8</div>
             <form onSubmit={onSubmit}>
