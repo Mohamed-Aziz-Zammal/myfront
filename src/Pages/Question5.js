@@ -6,7 +6,7 @@ function Question5() {
   const [lettres, setLettres] = useState([]);
   const [resltat, setResltat] = useState("");
   
-  const options = ['a', 'b', 'c','d','e', 'f', 'g','h','i', 'j', 'k','l','m', 'n', 'o','p','q', 'r', 's','t','u', 'v', 'w','x','y','z']; 
+  const options = ['aso','ette','ci','loya','go','ano','ce','gi','unsi','gè','gue','ompu','erte','ca','ussa']; 
 
   
 

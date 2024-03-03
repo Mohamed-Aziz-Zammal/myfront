@@ -5,7 +5,7 @@ function Question3() {
   const [lettres, setLettres] = useState([]);
     const [resltat, setResltat] = useState("");
     
-    const options = ['a', 'b', 'c','d','e', 'f', 'g','h','i', 'j', 'k','l','m', 'n', 'o','p','q', 'r', 's','t','u', 'v', 'w','x','y','z']; 
+    const options = ['fur','par','gor','olp','tru','pri','bur','cal','fal','blo','cro','spli','dar','fri','acno']; 
   
     
   
@@ -42,6 +42,7 @@ function Question3() {
     return (
       <>
         <form onSubmit={onSubmit}>
+        <h1>Question3</h1>
           <br />
           {options.map((option, index) => (
             <div key={index}>

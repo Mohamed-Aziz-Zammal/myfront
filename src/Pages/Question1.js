@@ -42,6 +42,7 @@ function Question1() {
     return (
       <>
         <form onSubmit={onSubmit}>
+        <h1>Question1</h1>
           <br />
           {options.map((option, index) => (
             <div key={index}>
