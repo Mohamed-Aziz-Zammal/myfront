@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import Axios from "axios";
 
 function Question6() {
-    const [lettres, setLettres] = useState([]);
+    const [mots, setmots] = useState([]);
     const [resltat, setResltat] = useState("");
   
     const options = ['couverture', 'violon', 'arbre', 'triangle','temoignage','klaxon','sachet','cultivateur'];
 
     const myresltat = () => {
-        var x = lettres.length;
+        var x = mots.length;
         if (x === options.length) {
             setResltat("oui");
         } else {
@@ -17,16 +17,16 @@ function Question6() {
     }
 
     const handleInputChange = (index,value) => {
-        const updatedLettres = [...lettres];
-        updatedLettres[index] ={ [options[index]]: value };
-        setLettres(updatedLettres);
+        const updatedmots = [...mots];
+        updatedmots[index] ={ [options[index]]: value };
+        setmots(updatedmots);
     };
 
     const onSubmit = async (e) => {
         e.preventDefault();
         await myresltat(); 
         const response = await Axios.post("http://localhost:3001/Question6/CreateQuestion6", {
-            lettres,
+            mots,
             resltat
         });
         console.log("response", response);
@@ -43,7 +43,7 @@ function Question6() {
                         <input
                             type="text"
                             id={option}
-                            value={(lettres[index] && Object.values(lettres[index])[0]) || ''}
+                            value={(mots[index] && Object.values(mots[index])[0]) || ''}
                             onChange={(e) => handleInputChange(index, e.target.value)}
                         />
                         <br />
