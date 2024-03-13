@@ -1,61 +1,92 @@
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navigationbar from './Navigationbar';
+//import Navigationbar from './Navigationbar';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home';
 import Medecin from './Pages/PagesMedecin/Medecin';
-import Smedecin from './Pages/PagesMedecin/Smedecin';
+//import Smedecin from './Pages/PagesMedecin/Smedecin';
 //import Test from './Pages/Test';
 import Register from './Pages/PagesUsers/Register';
 import Login from './Pages/PagesUsers/Login';
 import HomeUsers from './Pages/PagesUsers/HomeUsers';
 import EspaceUsers  from './Pages/PagesUsers/EspaceUsers';
-import Test from './Pages/PagesMedecin/Test';
+//import Test from './Pages/PagesMedecin/Test';
+
 import EspaceMedecin from './Pages/PagesMedecin/EspaceMedecin';
-import Question6 from './Pages/Question6';
-import Question7 from './Pages/Question7';
-import Question8 from './Pages/Question8';
-import Question1 from './Pages/Question1';
-import Question2 from './Pages/Question2';
-import Question3 from './Pages/Question3';
-import Question4 from './Pages/Question4';
-import Question5 from './Pages/Question5';
+
+
+import Test1 from './Pages/PagesUsers/Test1';
+import Portfolio from './Pages/PagesUsers/Portfolio';
+import Footer from './Footer';
+import Nav from './Nav'
+import AlertProtection from './Pages/AlertProtection';
+//import ProtectedRoute from './Pages/ProtectedRoute';
+//import { useState } from 'react';
+import HomeAdmin from './Pages/PagesAdmin/HomeAdmin';
 //import TestLogin from './Pages/PagesUsers/TestLogin';
 //import TestLogin from './Pages/PagesUsers/TestLogin';
 function App() {
+  //const [user,setUser]=useState(null);
+  //const login =()=>setUser({name:"aziz",role:"admin"});
+  //const logout =()=>setUser(null);
   return (
     <BrowserRouter>
+    {
+      /*
+        <h1>test p</h1>
+      {
+        (!user)?<button onClick={login}>se connectè</button>:<button onClick={logout}>se deconnecter</button>
+      }
     <div className="App">
-    <Navigationbar/>
+
+    
+       <ProtectedRoute user={user}>
+       <ProtectedRoute user={user && user.role === "admin"}>
+      */ 
+    }
+    
+    <Nav/>
    
       <Routes>
-        <Route path='/' element={<Home/>} />
+        <Route path='/' element={
+       
+        <Home/>
+        
+        } />
         
         <Route path='/medecin' element={<Medecin/>} >
-          <Route path='smedecin' element={<Smedecin/>} />
-          <Route path='espaceMedecin' element={<EspaceMedecin/>} />
-          <Route path='test' element ={<Test/>}/>
+          
+          <Route path='espaceMedecin' element={ <EspaceMedecin/>
+
          
-        </Route>
+          } />
+          </Route>
+
+        
+        
+        <Route path='/not_connected' element={<AlertProtection/>} />
+     
 
         <Route path='/users' element={<HomeUsers/>} >
           <Route index element={<Login/>}/>
           <Route path='login' element={<Login/>} />
           <Route path='register' element={<Register/>} />
-          <Route path='espace' element ={<EspaceUsers/>}/>
+              <Route path='espace' element ={<EspaceUsers/>}>
+                     <Route path='test' element={<Test1/>} />
+                     <Route path='portfolio' element={<Portfolio/>} />
+
+               </Route>
         </Route>
 
         
-        <Route path='/Question1' element={<Question1/>} />
-        <Route path='/Question2' element={<Question2/>} />
-        <Route path='/Question3' element={<Question3/>} />
-        <Route path='/Question4' element={<Question4/>} />
-        <Route path='/Question5' element={<Question5/>} />
-        <Route path='/Question6' element={<Question6/>} />
-        <Route path='/Question7' element={<Question7/>} />
-        <Route path='/Question8' element={<Question8/>} />
+        <Route path='/HomeAdmin' element={
+        
+        <HomeAdmin/>
+        
+        } />
+        
         
         
 
@@ -63,7 +94,9 @@ function App() {
         <Route path='*' element={<h1>Page Not Found</h1>} />
         
       </Routes>
-    </div>
+      <Footer/>
+    
+    
     </BrowserRouter>
   );
 }

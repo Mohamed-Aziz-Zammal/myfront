@@ -1,0 +1,10 @@
+/* Footer */
+.footer {
+    padding: 10px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+  }

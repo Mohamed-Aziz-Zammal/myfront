@@ -1,0 +1,11 @@
+.home-users-container {
+    background-color: aqua;
+}
+
+.home-users-container nav {
+    margin-top: 20px;
+}
+
+.home-users-container nav a {
+    margin-right: 10px;
+}

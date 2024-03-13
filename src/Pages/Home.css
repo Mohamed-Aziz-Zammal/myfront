@@ -1,0 +1,75 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+
+.home{
+  background-color: #F8F9FA;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Nunito;
+  
+}
+h1{
+  font-size: 5rem;
+  margin-top: 5vh;
+}
+.dyslexie{
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 16px;
+  height: 50vh;
+}
+
+.desc{
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  height: auto;
+  width: 40%;
+}
+
+.image {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  height: 80%;
+  width: 40%;
+  display: flex;
+  justify-content: center; /* Horizontally center */
+  align-items: center; /* Vertically center */
+}
+
+.image img {
+  height: 100%;
+  width: auto; /* Maintain aspect ratio */
+}
+
+
+.us{
+  background-color: #007BFF;
+  height: auto;
+  color: #F8F9FA;
+}
+.us p {
+  margin: 5vh;
+}
+
+.personnes{
+  height: 60vh;
+  padding: 2vh;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.card{
+  background-color: #ffcc00;
+  width: 30%;
+  height: 80%;
+  margin: 5vh;
+}
+
+.contact{
+  background-color: #007BFF;
+  height: 15vh;
+  width: 100%;
+}

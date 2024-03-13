@@ -25,7 +25,7 @@ function Medecin() {
           setCookies("access_token",response.data.token)
           window.localStorage.setItem("MedecinID",response.data.medecinID)
         
-         navigate("test")
+         navigate("/medecin/espaceMedecin")
 
          
         }
@@ -39,7 +39,7 @@ function Medecin() {
         console.log("response.",result)
         setCookies("access_token",result.data.token)
         window.localStorage.setItem("MedecinID",result.data.medecinID)
-        navigate("test")
+        navigate("espaceMedecin")
       })
       .catch(error=>{
         console.log(error)

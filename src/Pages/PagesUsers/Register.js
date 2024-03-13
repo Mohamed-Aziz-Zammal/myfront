@@ -24,7 +24,7 @@ function Register() {
       })
       console.log("response.message",response.data.message)
       console.log("response",response)
-      navigate("users")
+      navigate("/users/login")
   }
 
 
