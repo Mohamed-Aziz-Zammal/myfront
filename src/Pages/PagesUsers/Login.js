@@ -4,6 +4,10 @@ import Axios  from "axios"
 import{ useCookies} from 'react-cookie'
 import { useState } from "react";
 import { useNavigate} from 'react-router-dom';
+import { Link} from 'react-router-dom'
+import './Login.css'
+
+
 function Login() {
     const [email,setEmail]=useState("")
     const [password,setPassword]=useState("")
@@ -40,22 +44,29 @@ function Login() {
     
   return (
     <>
+    <div className='containerLogin'>
+    <nav>
+    <Link to={"login"} >login</Link>
+    <Link  to={"register"}>Register</Link>
+    </nav>
     <h1>login</h1>
     <form onSubmit={onSubmit}>
       <label>Email address :</label>
       <input type='text'  value={email}
-                  onChange={e => setEmail(e.target.value)} />
+                  onChange={e => setEmail(e.target.value)}
+              className='input'     />
       
       <br></br>
       <label>Password : </label>
       <input type='text'  value={password}
-                  onChange={e => setPassword(e.target.value)} />
+                  onChange={e => setPassword(e.target.value)}
+                  className='input'     />
       <br>
       </br>
     <button  type="submit">login</button>            
 
     </form>
-  
+    </div>
    </>
   )
 }

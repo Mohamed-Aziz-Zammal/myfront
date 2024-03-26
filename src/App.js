@@ -6,27 +6,31 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home';
 import Medecin from './Pages/PagesMedecin/Medecin';
-//import Smedecin from './Pages/PagesMedecin/Smedecin';
-//import Test from './Pages/Test';
+
 import Register from './Pages/PagesUsers/Register';
 import Login from './Pages/PagesUsers/Login';
 import HomeUsers from './Pages/PagesUsers/HomeUsers';
 import EspaceUsers  from './Pages/PagesUsers/EspaceUsers';
-//import Test from './Pages/PagesMedecin/Test';
+
 
 import EspaceMedecin from './Pages/PagesMedecin/EspaceMedecin';
 
 
 import Test1 from './Pages/PagesUsers/Test1';
-import Portfolio from './Pages/PagesUsers/Portfolio';
+import Portfolio from './Pages/PagesUsers/Profile';
 import Footer from './Footer';
 import Nav from './Nav'
 import AlertProtection from './Pages/AlertProtection';
-//import ProtectedRoute from './Pages/ProtectedRoute';
-//import { useState } from 'react';
+
 import HomeAdmin from './Pages/PagesAdmin/HomeAdmin';
-//import TestLogin from './Pages/PagesUsers/TestLogin';
-//import TestLogin from './Pages/PagesUsers/TestLogin';
+
+
+import RendezVousMedecin from './Pages/PagesMedecin/RendezVousMedecin'
+import PatientsMedecin from './Pages/PagesMedecin/PatientsMedecin';
+import ProfileMedecin from './Pages/PagesMedecin/ProfileMedecin';
+
+
+
 function App() {
   //const [user,setUser]=useState(null);
   //const login =()=>setUser({name:"aziz",role:"admin"});
@@ -50,52 +54,49 @@ function App() {
     <Nav/>
    
       <Routes>
-        <Route path='/' element={
-       
-        <Home/>
+        <Route path='/' element={ <Home/>} />
         
-        } />
-        
-        <Route path='/medecin' element={<Medecin/>} >
+
+
+
+        <Route path='/medecin' element={<Medecin/>} />
+        <Route path='/medecin/espaceMedecin' element={ <EspaceMedecin/>} >
+        <Route index element={<PatientsMedecin/>}/>
+                    <Route path='patients' element= {<PatientsMedecin/>}/>
+                     <Route path='Profile' element= {<ProfileMedecin/>}/>
+                     <Route path='rendez-vous' element={<RendezVousMedecin/>}/>
           
-          <Route path='espaceMedecin' element={ <EspaceMedecin/>
+        </Route> 
 
-         
-          } />
-          </Route>
-
-        
-        
-        <Route path='/not_connected' element={<AlertProtection/>} />
      
 
         <Route path='/users' element={<HomeUsers/>} >
           <Route index element={<Login/>}/>
           <Route path='login' element={<Login/>} />
           <Route path='register' element={<Register/>} />
-              <Route path='espace' element ={<EspaceUsers/>}>
+           
+        </Route>
+        <Route path='/users/espace' element ={<EspaceUsers/>}>
+        <Route index element={<Test1/>}/>
                      <Route path='test' element={<Test1/>} />
                      <Route path='portfolio' element={<Portfolio/>} />
 
-               </Route>
-        </Route>
-
-        
-        <Route path='/HomeAdmin' element={
-        
-        <HomeAdmin/>
-        
-        } />
-        
-        
+           </Route>
         
 
-
+        
+        <Route path='/HomeAdmin' element={  <HomeAdmin/> } />
+        
+      
+        <Route path='/not_connected' element={<AlertProtection/>} />
         <Route path='*' element={<h1>Page Not Found</h1>} />
         
       </Routes>
-      <Footer/>
-    
+
+
+
+      
+    <Footer/>
     
     </BrowserRouter>
   );

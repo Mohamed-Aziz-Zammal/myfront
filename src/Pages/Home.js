@@ -19,7 +19,7 @@ function Home() {
             </p>
           </div>
           <div className='image'>
-          <img  src="https://4.bp.blogspot.com/_TRcQCuP2b5A/TGIc0FLna3I/AAAAAAAAK5E/nC_BQxn1vfs/s1600/rearrange+dyslexia+web.jpg" alt="dyslexie" />
+          <img  src="image/dyslexia.png" alt="dyslexie" />
           </div>
         </div>
         <div className='us' > 

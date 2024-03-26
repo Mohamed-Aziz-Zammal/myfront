@@ -5,7 +5,9 @@ import './Footer.css'
 function Footer() {
   return (
     <div class="footer">
-         @Mohamed_Aziz_Zammal
+         
+         &copy; 2024 Mohamed Aziz Zammal. Tous droits réservés.
+
     </div>
   )
 }

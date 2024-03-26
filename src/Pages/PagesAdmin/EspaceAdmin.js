@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link, Outlet } from 'react-router-dom'
-import './EspaceMedecin.css'
+import './EspaceAdmin.css'
 
-function EspaceMedecin() {
+function EspaceAdmin() {
   return (
     <>
     
@@ -26,4 +26,4 @@ function EspaceMedecin() {
   )
 }
 
-export default EspaceMedecin
+export default EspaceAdmin

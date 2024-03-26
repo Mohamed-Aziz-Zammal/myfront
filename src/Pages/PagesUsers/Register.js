@@ -3,6 +3,7 @@ import React from 'react'
 import Axios  from "axios"
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 function Register() {
 
   const [name,setName]=useState("")
@@ -24,7 +25,7 @@ function Register() {
       })
       console.log("response.message",response.data.message)
       console.log("response",response)
-      navigate("/users/login")
+      navigate("login")
   }
 
 
@@ -32,7 +33,10 @@ function Register() {
 
   return (
     <>
-        
+        <nav>
+    <Link to={"login"} >login</Link>
+    <Link  to={"register"}>Register</Link>
+    </nav>
     <h1>Register</h1>
     <form onSubmit={onSubmit}>
  
